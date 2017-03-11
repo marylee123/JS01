@@ -1,0 +1,24 @@
+<html>
+	<head>
+		<script>
+			function ask(){
+				var meal = prompt("What would you like? A meal or desert");
+				console.log(meal)
+				if(meal == "meal"){
+					alert("Good person");
+				}
+				else if(meal == "desert"){
+					alert("I like desert too");
+				}
+				else{
+					alert("Sorry dude, not a choice. Try again.");
+					ask();
+				}
+			}
+			ask();
+		</script>
+	</head>
+	<body>
+
+	</body>
+</html>
