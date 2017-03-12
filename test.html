@@ -2,6 +2,7 @@
 	<head>
 		<script>
 			function test(){
+				var what = prompt("You wake up in a room wearing a purple hat. There is a parrot squawking at you frantically, and a disco ball spinning overhead. The television on the far side of the room magically turns on, and Donald Trump is giving a speech about building a wall.");
 				if(what == "turn disco ball off"){
 					var disco = prompt("You turned the disco ball off and a projecter appears. It projects a keyhole.")
 					if(disco == "take key"){
@@ -10,19 +11,19 @@
 							var nuts = prompt("You take off the purple hat. You see that there is bird food in it.");
 							if(nuts == "give food to parrot"){
 								var tree = prompt("You gave the food to the parrot. You get the key.");
-								if(near == "insert key"){
+								if(tree == "insert key"){
 									alert("You escaped. Congrats!");
 								}
-								else if(near == "turn tv off"){
+								else if(tree == "turn tv off"){
 									alert("You turned the tv off. The parrot stops squawking. You then realize that there is a key in its cage.")
 								}
 							}
 						}
-						else if(nuts == "eat food"){
+						else if(hurt == "eat food"){
 							alert("The food is not made for you. You choke on it and cough it out.");
 						}
 					}
-					else if(hurt == "turn tv off"){
+					else if(disco == "turn tv off"){
 						var project = prompt("The disco ball turns off and a projecter turns on. A keyhole appears.");
 						if(project == "take off purple hat"){
 							var bird = prompt("You take off the purple hat. You see that there is bird food in it.");
@@ -32,14 +33,14 @@
 									alert("You escaped. Congrats!");
 								}
 							}
-							else if(giving == "eat food"){
+							else if(bird == "eat food"){
 								alert("The food is not made for you. You choke on it and cough it out.");
 							}
 						}
 					}
 					else if(disco == "turn tv off"){
 						var almost = prompt("You turned the tv off. The parrot stops squawking. You then realize that there is a key in its cage.")
-						if(almosr == "take purple hat off"){
+						if(almost == "take purple hat off"){
 							var hat = prompt("You take off the purple hat. You see that there is bird food in it.");
 							if(hat == "give food to parrot"){
 								var purple = prompt("You gave the food to the parrot. You get the key.");
@@ -51,7 +52,7 @@
 								alert("The food is not made for you. You choke on it and cough it out.");
 							}
 						}
-						else if(finish == "take key"){
+						else if(almost == "take key"){
 							alert("You try to take the key. But the parrot will not let you.");
 						}
 					}
@@ -61,9 +62,9 @@
 							var violet = prompt("You gave the food to the parrot. You get the key.");
 							if(violet == "take key"){
 								var almost = prompt("You try to take the key. But the parrot will not let you.");
-									if(almost == "insert key"){
-										alert("You escaped. Congrats!");		
-									}
+								if(almost == "insert key"){
+									alert("You escaped. Congrats!");		
+								}
 							}
 							else if(hat == "eat food"){
 								alert("The food is not made for you. You choke on it and cough it out.");
