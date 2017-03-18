@@ -5,6 +5,9 @@
 
 				var times = 0;
 
+				var computer = 0;
+				var player = 0;
+
 				while(times < 5){
 					var computerChoice = Math.ceil(Math.random() * 3);
 
@@ -21,33 +24,39 @@
 					}
 					if(handGame === computerString){
 						alert("tie");
+						var computer = computer + 1;
+						var player = player + 1;
 					}
 					else if(handGame === "rock" && computerString === "paper"){
-						alert("The computer played paper. You lose this round.")
+						alert("The computer played paper. You lose this round.");
+						var computer = computer + 1;
 					}
 					else if(handGame === "rock" && computerString === "scissors"){
-						alert("The computer played scissors. You win this round!")
+						alert("The computer played scissors. You win this round!");
+						var player = player + 1;
 					}
 					else if(handGame === "paper" && computerString === "rock"){
-						alert("The computer played rock. You win this round!")
+						alert("The computer played rock. You win this round!");
+						var player = player + 1;
 					}					
 					else if(handGame === "paper" && computerString === "scissors"){
-						alert("The computer played scissors. You lose this round.")
+						alert("The computer played scissors. You lose this round.");
+						var computer = computer + 1;
 					}
 					else if(handGame === "scissors" && computerString === "rock"){
-						alert("The computer played rock. You lose this round.")
+						alert("The computer played rock. You lose this round.");
+						var computer = computer + 1;
 					}
 					else if(handGame === "scissors" && computerString === "paper"){
-						alert("The computer played paper. You win this round!")
+						alert("The computer played paper. You win this round!");
+						var player = player + 1;
 					}
 					times = times + 1;
 				}
-			}
-			RockPaperScissors()
 
-			function score(){
-				if()
+				alert("Computer: " + computer + " Player: " + player);
 			}
+			RockPaperScissors();
 		</script>
 	</head>
 	<body>
