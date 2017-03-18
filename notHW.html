@@ -1,0 +1,38 @@
+<html>
+  <body style="background-color: red;">
+    <script>
+      function commonRoom() {
+        alert("This is the common room. It's very common in here.");
+        var action = prompt("What do you want to do? [sneak out]");
+
+        if (action == "sneak out") {
+          forbiddenForest();
+        } else {
+          commonRoom();
+        }
+      }
+
+      function forbiddenForest() {
+        alert("You've come to the forbidden forest. It's very dark and creepy in here.");
+        var action = prompt("What do you want to do? [get kidnapped, go home]");
+
+        if (action == "get kidnapped") {
+          secretLair();
+        } else if (action == "go home") {
+          commonRoom();
+        } else {
+          alert("DON'T UNDERSTAND!");
+          forbiddenForest();
+        }
+      }
+
+      function secretLair() {
+        alert("There's a lot of Pokemon that want to capture you.");
+        alert("WHAT???");
+      }
+
+      commonRoom();
+    </script>
+  </body>
+</html>
+Add Comment

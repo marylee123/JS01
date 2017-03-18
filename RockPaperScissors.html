@@ -1,0 +1,55 @@
+<html>
+	<head>
+		<script>
+			function RockPaperScissors(){
+
+				var times = 0;
+
+				while(times < 5){
+					var computerChoice = Math.ceil(Math.random() * 3);
+
+					var handGame = prompt("Rock, paper, or scissors?")
+
+					if(computerChoice === 1){
+						var computerString = "rock";
+					}
+					else if(computerChoice === 2){
+						var computerString = "paper";
+					}
+					else if(computerChoice === 3){
+						var computerString = "scissors";
+					}
+					if(handGame === computerString){
+						alert("tie");
+					}
+					else if(handGame === "rock" && computerString === "paper"){
+						alert("The computer played paper. You lose this round.")
+					}
+					else if(handGame === "rock" && computerString === "scissors"){
+						alert("The computer played scissors. You win this round!")
+					}
+					else if(handGame === "paper" && computerString === "rock"){
+						alert("The computer played rock. You win this round!")
+					}					
+					else if(handGame === "paper" && computerString === "scissors"){
+						alert("The computer played scissors. You lose this round.")
+					}
+					else if(handGame === "scissors" && computerString === "rock"){
+						alert("The computer played rock. You lose this round.")
+					}
+					else if(handGame === "scissors" && computerString === "paper"){
+						alert("The computer played paper. You win this round!")
+					}
+					times = times + 1;
+				}
+			}
+			RockPaperScissors()
+
+			function score(){
+				if()
+			}
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

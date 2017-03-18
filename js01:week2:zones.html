@@ -1,0 +1,41 @@
+<html>
+	<head>
+		<script>
+			function commonRoom(){
+				var begin = prompt("You're at the commonroom. What will you like to do next?(break rules, do homework, or go home)");
+				if(begin === "break rules"){
+					BreakRules();
+				}
+				else if(begin === "do homework"){
+					alert("Good child. You will be safe and have a great 7 years at Hogwarts as long as you keep it up.");
+				}
+				else if(begin === "go home"){
+					alert("It is a dangerous journey out there. You do not make it.");
+				}
+				else{
+					alert("Invalid. Try again.");
+					commonRoom();
+				}
+			}
+			function BreakRules(){
+				var breakrules = prompt("What will you like to do?(go to the forbidden forest, go out after curfew, do magic in front of muggles)");
+				if(breakrules === "go to the forbidden forest"){
+					alert("You go to the forbidden forest and get badly injured. Luckily the teachers find you and rescue you from the dangers of the forest. Bad news, you get detention every sataurday for the rest of the year by Proffeser Snape.");
+				}
+				else if(breakrules === "go out after curfew"){
+					alert("You go out after curfew. You get caught by Peeves and he tells on you. You get detention on Saturday.");
+				}
+				else if(breakrules === "do magic in front of muggles"){
+					alert("You get expelled and they break your wand. You cannot do magic again.");
+				}
+				else{
+					alert("Invalid. Try again.");
+					BreakRules()
+				}
+			}
+		</script>
+	</head>
+	<body>
+
+	</body>
+</html>		
