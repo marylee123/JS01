@@ -10,7 +10,7 @@
 					alert("Good child. You will be safe and have a great 7 years at Hogwarts as long as you keep it up.");
 				}
 				else if(begin === "go home"){
-					alert("It is a dangerous journey out there. You do not make it.");
+					alert("It is a dangerous journey out there. You do not make it. ");
 				}
 				else{
 					alert("Invalid. Try again.");
@@ -20,8 +20,18 @@
 			function BreakRules(){
 				var breakrules = prompt("What will you like to do?(go to the forbidden forest, go out after curfew, do magic in front of muggles)");
 				if(breakrules === "go to the forbidden forest"){
-					alert("You go to the forbidden forest and get badly injured. Luckily the teachers find you and rescue you from the dangers of the forest. Bad news, you get detention every sataurday for the rest of the year by Proffeser Snape.");
-				}
+					var rules = prompt("You go to the forbidden forest and get badly injured. (go to shrieking shack, go back to Howgwarts)");
+					if(rules === "go to shrieking shack"){
+						ShriekingShack();
+					}
+					else if(rules === "go back to Hogwarts"){
+						alert("You went back to Hogwarts but Peeves caught you and told on you. Bad news, you get detention every sataurday for the rest of the year by Proffeser Snape.");
+					}
+					else{
+					alert("Invalid. Try again.");
+					BreakRules();
+					}
+				} 
 				else if(breakrules === "go out after curfew"){
 					alert("You go out after curfew. You get caught by Peeves and he tells on you. You get detention on Saturday.");
 				}
@@ -30,7 +40,30 @@
 				}
 				else{
 					alert("Invalid. Try again.");
-					BreakRules()
+					BreakRules();
+				}
+			}
+			function ShriekingShack(){
+				var shack = prompt("You go to Hogwarts before you get caught. (go to Filch's office, go to house tower)");
+				if(shack === "go to Filch's office"){
+					var map = prompt("You go to Filch's office. You see there is a map. (take map, go to house tower)");
+					if(map === "take map"){
+						alert("You take the map. You realize it shows everybody in Hogwarts and where they are or heading. You use it to avoid the Proffesers. You made it.");
+					}
+					else if(map === "go to house tower"){
+						alert("You went back to Hogwarts but Peeves caught you and told on you. Bad news, you get detention every sataurday for the rest of the year by Proffeser Snape.");
+					}
+					else{
+						alert("Invalid. Try again.");
+						ShriekingShack();
+					}
+				}
+				else if(shack === "go to house tower"){
+					alert("You went back to Hogwarts but Peeves caught you and told on you. Bad news, you get detention every sataurday for the rest of the year by Proffeser Snape.");
+				}
+				else{
+						alert("Invalid. Try again.");
+						ShriekingShack();
 				}
 			}
 		</script>
