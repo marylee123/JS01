@@ -5,13 +5,18 @@
 				var what = prompt("You wake up in a room wearing a purple hat. There is a parrot squawking at you frantically, and a disco ball spinning overhead. The television on the far side of the room magically turns on, and Donald Trump is giving a speech about building a wall. (turn tv off, take purple hat off, turn disco ball off)");
 				if(what == "turn tv off"){
 					tv();
-				if(what == "turn disco ball off"){
+				}
+				else if(what == "turn disco ball off"){
 					disco();
 				}				
 				else if(what == "take purple hat off"){
 					hat();
 				}
+				else{
+					escape();
+				}
 			}
+			escape()
 			function tv(){
 				var key = prompt("You turned the tv off. The parrot stops squawking. You then realize that there is a key in its cage. (take key, turn disco ball off, take purple hat off)");
 				if(key == "take key"){
@@ -360,7 +365,6 @@
 					hat();
 				}				
 			}						
-			escape()
 		</script>
 	</head>
 </html>

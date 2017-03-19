@@ -1,21 +1,123 @@
 <head>
 	<head>
 		<script>
-			function escape(){
-				var what = prompt("You wake up in a room wearing a purple hat. There is a parrot squawking at you frantically, and a disco ball spinning overhead. The television on the far side of the room magically turns on, and Donald Trump is giving a speech about building a wall. (turn tv off, take purple hat off, turn disco ball off)");
-				if(what === "turn tv off"){
+			function tv(){
+				var key = prompt("You turned the tv off. The parrot stops squawking. You then realize that there is a key in its cage. (take key, turn disco ball off, take purple hat off)");
+				if(key == "take key"){
+					var injury = prompt("You try to take the key. But the parrot will not let you. (take purple hat off, turn disco ball off)");
+					if(injury == "take purple hat off"){
+						var food = prompt("You take off the purple hat. You see that there is bird food in it. (give food to parrot, eat food)");
+						if(food == "give food to parrot"){
+							var give = prompt("You gave the food to the parrot. You get the key. (turn disco ball off)");
+							if(give == "turn disco ball off"){
+								var close = prompt("The disco ball turns off and a projecter turns on. A keyhole appears. (insert key)");
+								if(close == "insert key"){
+									alert("You escaped. Congrats!");
+								}
+							}
+						}
+						else if(food == "eat food"){
+							alert("The food is not made for you. You choke on it and cough it out.");
+						}
+					}
+					else if(injury == "turn disco ball off"){
+						var fin = prompt("The disco ball turns off and a projecter turns on. A keyhole appears. (take off purple hat)");
+						if(fin == "take off purple hat"){
+							var giving = prompt("You take off the purple hat. You see that there is bird food in it. (give food to parrot, eat food)");
+							if(giving == "give food to parrot"){
+								var parrot = prompt("You gave the food to the parrot. You get the key. (insert key)");
+								if(parrot == "insert key"){
+										alert("You escaped. Congrats!");
+								}
+								else{
+									alert("Invalid. Try again.");
+									tv();
+								}
+							}
+							else if(giving == "eat food"){
+								alert("The food is not made for you. You choke on it and cough it out.");
+							}
+							else{
+								alert("Invalid. Try again.");
+								tv();
+							}
+						}
+						else{
+							alert("Invalid. Try again.");
+							tv();
+						}
+					}
+					else{
+						alert("Invalid. Try again.");
+						tv();
+					}
+				}
+				else if(key == "turn disco ball off"){
+					var finish = prompt("The disco ball turns off and a projecter turns on. A keyhole appears. (take purple hat off, take key)");
+					if(finish == "take purple hat off"){
+						var hat = prompt("You take off the purple hat. You see that there is bird food in it. (give food to parrot, eat food)");
+						if(hat == "give food to parrot"){
+							var purple = prompt("You gave the food to the parrot. You get the key.");
+							if(purple == "insert key"){
+								alert("You escaped. Congrats!");
+							}
+							else{
+								alert("Invalid. Try again.");
+								tv();
+							}
+						}
+						else if(hat == "eat food"){
+							alert("The food is not made for you. You choke on it and cough it out.");
+						}
+						else{
+							alert("Invalid. Try again.");
+							tv();
+						}
+					}
+					else if(finish == "take key"){
+						alert("You try to take the key. But the parrot will not let you.");
+					}
+					else{
+						alert("Invalid. Try again.");
+						tv();
+					}
+				}
+				else if(key == "take purple hat off"){
+					var take = prompt("You take off the purple hat. You see that there is bird food in it. (give food to parrot, eat food, take key)");
+					if(take == "give food to parrot"){
+						var violet = prompt("You gave the food to the parrot. You get the key. (turn disco ball off)");
+						if(violet == "turn disco ball off"){
+							var almost = prompt("The disco ball turns off and a projecter turns on. A keyhole appears. (insert key)");
+							if(almost == "insert key"){
+								alert("You escaped. Congrats!");
+							}
+							else{
+								alert("Invalid. Try again.");
+								tv();
+							}
+						}
+						else{
+							alert("Invalid. Try again.");
+							tv();
+						}
+					}
+					else if(hat == "eat food"){
+						alert("The food is not made for you. You choke on it and cough it out.");
+					}
+					else if(finish == "take key"){
+						alert("You try to take the key. But the parrot will not let you.");
+					}
+					else{
+						alert("Invalid. Try again.");
+						tv();
+					}						
+				}
+				else{
+					alert("Invalid. Try again.");
 					tv();
 				}
-				else if(what === "take purple hat off"){
-					hat();
-				}
-				else if(what === "turn disco ball off"){
-					disco();
-				}
 			}
-			function tv(){
-				a
-			}
+			tv();
 		</script>
 	</head>
 </head>
