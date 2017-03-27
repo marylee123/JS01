@@ -1,0 +1,54 @@
+<html>
+	<head>
+		<script>
+			function go(){
+
+				var name = document.getElementById("name");
+				var age = document.getElementById("age");
+				var money = document.getElementById("money");
+				var past = document.getElementById("past");
+				var noun = document.getElementById("noun");
+				var present = document.getElementById("present");
+				var now = document.getElementById("now");
+
+
+				var sentence = "Dear " + name.value + ", Happy Birthday! Congrats on turning " + age.value + "! Hope you like the " + money.value + " dollars I got you. You were a very " + past.value + " baby back then. I remember when you were obsessed with " + noun.value + ". You have changed so much. You are now very " + present.value + " and " + now.value + ". Anyways, congrats! Grandma❤️";
+				
+				
+				var output = document.getElementById("paragraph");
+				output.textContent = sentence;
+			}
+		</script>
+		<style>
+			*{
+				font-size: 40px;
+			}
+		</style>
+	</head>
+	<body>
+		<label for="name">Name</label>
+		<input id="name"></input><br><br>
+
+		<label for="age">Integer</label>
+		<input id="age"></input><br><br>
+
+		<label for="money">Integer</label>
+		<input id="money"></input><br><br>
+
+		<label for="past">Adjective</label>
+		<input id="past"></input><br><br>
+
+		<label for="noun">Noun</label>
+		<input id="noun"></input><br><br>		
+
+		<label for="present">Adjective</label>
+		<input id="present"></input><br><br>
+
+		<label for="now">Adjective</label>
+		<input id="now"></input><br><br>
+
+		<button onclick="go();">Go</button>
+
+		<p id="paragraph"></p>
+	</body>
+</html>

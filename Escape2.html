@@ -1,44 +1,49 @@
 <html>
 	<head>
 		<script>
-			function escape()
-			{
-				var what = prompt("You wake up in a room wearing a purple hat. There is a parrot squawking at you frantically, and a disco ball spinning overhead. The television on the far side of the room magically turns on, and Donald Trump is giving a speech about building a wall.") 
-				if(what == "turn tv off"){				
-					var key = prompt("You turned the tv off. The parrot stooped squawking. You then realize there is a key in its cage.")					
+			var what = prompt("You wake up in a room wearing a purple hat. There is a parrot squawking at you frantically, and a disco ball spinning overhead. The television on the far side of the room magically turns on, and Donald Trump is giving a speech about building a wall.");
+
+			function tv(){
+				var key = prompt("You turned the tv off. The parrot stooped squawking. You then realize there is a key in its cage."); 
+				if(what == "turn tv off"){									
 					if(key == "take key"){
 						var take = prompt("You try to take the key but the parrot does not let you")
-						if(take == "turn disco ball off")
-						{
+						if(take == "turn disco ball off"){
+							var what = prompt("You turn off the the disco ball and a projecter turns on. It projects a keyhole.");
 						}
 						else if(take == "take purple hat off"){
-
+							var what = prompt("You take your hat off and see that there is parrot food.");
 						}
 					}
 					else if(key == "turn disco ball off"){
-						var fin = prompt("You turn off the the disco ball and a projecter turns on. It projects a keyhole.")
-						if(fin == "")
+						var fin = prompt("You turn off the the disco ball and a projecter turns on. It projects a keyhole.");
 					}
 					else if(key == "take purple hat off"){
 
 					}
 				}
+			}
+			function hat(){
 				else if(what == "take purple hat off"){
-					var food = prompt("You take your hat off and see that there is parrot food.")
-					if(food == "give food to parrot"){
-						var give = prompt("The parrot eats the food. You see a key in its cage."){
+					var what = prompt("You take your hat off and see that there is parrot food.");
 
-						}
+					if(key == "turn disco ball off"){
+						var key = prompt("You turn off the the disco ball and a projecter turns on. It projects a keyhole.");
 					}
-					else if(food == "Turn disco ball off"){
-
-					}
-					else if(food == "turn tv off"){
-
+					else if(key == "turn tv off"){
+						var key = prompt("You turned the tv off. The parrot stooped squawking. You then realize there is a key in its cage.");
 					}
 				}
+			}
+			function disco(){
 				else if(what == "turn off disco ball"){
-					var close = prompt("You turn off the the disco ball and a projecter turns on. It projects a keyhole.")
+					var key = prompt("You turn off the the disco ball and a projecter turns on. It projects a keyhole.");
+					if(key == "take purple hat off"){
+						var key = prompt("You turn off the the disco ball and a projecter turns on. It projects a keyhole.");
+					}
+					else if(key == "turn tv off"){
+						var key = prompt("You turned the tv off. The parrot stooped squawking. You then realize there is a key in its cage.");
+					}
 				}
 			}
 		</script>
