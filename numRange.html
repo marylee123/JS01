@@ -1,0 +1,23 @@
+<html>
+	<head>
+		<script>
+			function range(){
+				var boolean = true 
+				while (boolean){
+					var computerChoice = Math.ceil(Math.random() * 10);
+					var guess = prompt("Pick a number 1 through 10");
+					if(guess === computerChoice){
+						alert("Great! You got the same number!");
+					}
+					else if(guess === "I give up"){
+						boolean = false;
+					} 
+					else{
+						alert("Whoops! Sorry wrong number!");
+					}
+				}
+			}
+			range();
+		</script>
+	</head>
+</html>

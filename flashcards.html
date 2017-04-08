@@ -1,0 +1,52 @@
+<html>
+  <head>
+    <style>
+      body {
+        font-family: Helvetica;
+        text-align: center;
+      }
+      #card {
+        width: 500px;
+        padding: 120px 0;
+        margin: 50px auto;
+        border: 5px solid black;
+        border-radius: 5px;
+        font-size: 18px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="card"></div>
+    <input type="text" id="answer" autofocus></input>
+    <button onclick="checkAnswer()">Submit</button>
+
+    <script>
+    	var question = ["25 * 25", "6 + 2", "x * 1 = x + 2", "H, b, t, y! H, b, t, y! H, b, d _"];
+
+    	var answer = ["625", "8", "no answer", "ABCDEFGHIJKLMNOPQRSTUVWXYZ"];
+
+    	var currentQuestion = 0;
+
+    	function checkAnswer(){
+    		var input = document.getElementById("answer");
+    		var userAnswer = input.value;
+
+    		if(userAnswer === answer[currentQuestion]){
+    			alert("Corect! You might be a genius after all");
+    		}
+    		else{
+    			alert("A big red F!");
+    		}
+    		nextQuestion();
+    	}
+    	function nextQuestion(){
+    		currentQuestion = currentQuestion + 1;
+    		document.getElementById("card").textContent = question[currentQuestion];
+    	}
+
+		var flash = document.getElementById("card");
+		console.log(flash);
+		flash.textContent = question[0];    	
+    </script>
+  </body>
+</html>

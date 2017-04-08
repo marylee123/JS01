@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <title>String Wizard</title>
+    <script>
+      function double() {
+        // 1. Find the <input>
+        var myInput = document.getElementById("myInput");
+        // 2. Extract the string from the <input>
+        var string = myInput.value;
+        // 3. Double the string
+        var doubleString = string + string;
+        // 4. Find the <span>
+        var mySpan = document.getElementById("mySpan");
+        // 5. Insert the doubled string into the <span>
+        mySpan.textContent = doubleString;
+      }
+    </script>
+  </head>
+  <body>
+    <label for="myInput">String, please:</label>
+    <input type="text" id="myInput"/>
+    <span id="mySpan"></span>
+    <br/>
+    <button onclick="double();">Repeat!</button>
+  </body>
+</html>
