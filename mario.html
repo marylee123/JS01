@@ -1,0 +1,61 @@
+<html>
+	<head>
+		<style>
+			body{
+				background-image: url("http://weknownyourdreamz.com/images/jungle/jungle-05.jpg");
+			}
+		</style>
+		<script src="https://rawgit.com/craftyjs/Crafty/release/dist/crafty-min.js"></script>
+	</head>
+	<body>
+		<script>
+			function start(){
+				Crafty.init();
+
+				var player = Crafty.e("Player, 2D, DOM, Color, Twoway, Gravity, Solid, Collision");
+
+				var platform = Crafty.e("2D, DOM, Color, Platform");
+				platform.attr({x: 0, y: 300, w: 200, h: 10});
+				platform.color("green");
+
+				var platform1 = Crafty.e("2D, DOM, Color, Platform");
+				platform1.attr({x: 300, y: 270, w: 150, h: 10});
+				platform1.color("green");
+
+				var platform2 = Crafty.e("2D, DOM, Color, Platform");
+				platform2.attr({x: 550, y: 310, w: 100, h: 10});
+				platform2.color("green");
+
+				var platform3 = Crafty.e("2D, DOM, Color, Platform");
+				platform3.attr({x: 650, y: 380, w: 90, h: 10});
+				platform3.color("green");
+
+				var platform4 = Crafty.e("2D, DOM, Color, Platform");
+				platform4.attr({x: 1000, y: 400, w: 60, h: 10});
+				platform4.color("green");
+
+				var goal = Crafty.e("2D, DOM, Color, Twoway, Gravity, Collision");
+				goal.attr({x: 1310, y: 200, w: 200, h: 10});
+				goal.color("green");
+
+				player.x = 50;
+				player.y = 50;
+
+				player.w = 100;
+				player.h = 100;
+				player.color("cyan");
+
+				player.twoway(200);
+				player.gravity("Platform");
+
+				goal.onHit("Player", hit);
+
+				function hit(){
+					alert("You win!");
+				}
+			}
+
+			window.onload = start;
+		</script>
+	</body>
+</html>
