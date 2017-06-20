@@ -16,10 +16,10 @@
 				var player = Crafty.e("Player, 2D, DOM, Twoway, Gravity, Solid, Collision, Image").image("eevee.png");
 				
 				//adding audio from an object
-				Crafty.audio.add({
+				/*Crafty.audio.add({
   				shoot: [
           				"beep5.mp3"]
-						});
+						});*/
 
 				var platform = Crafty.e("2D, DOM, Color, Platform");
 				platform.attr({x: 0, y: 300, w: 200, h: 10});
@@ -60,6 +60,10 @@
 				function hit(){
 					alert("You win!");
 				}
+				
+				var audio = new;
+				Audio('your_audio_file_file.mp3');
+				audio.play;
 			}
 
 			window.onload = start;
