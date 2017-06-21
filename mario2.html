@@ -2,7 +2,7 @@
 	<head>
 		<style>
 			body{
-				background-image: url("http://weknownyourdreamz.com/images/jungle/jungle-05.jpg");
+				background-image: url("http://1080pwallpaper.net/preview/?img=http://1080pwallpaper.net/wp-content/uploads/2017/05/pokemon-go-Wallpaper.jpg&width=1440&height=900");
 			}
 		</style>
 		<script src="https://rawgit.com/craftyjs/Crafty/release/dist/crafty-min.js"></script>
@@ -22,29 +22,37 @@
 						});*/
 
 				var platform = Crafty.e("2D, DOM, Color, Platform");
-				platform.attr({x: 0, y: 300, w: 200, h: 10});
-				platform.color("green");
+				platform.attr({x: 0, y: 300, w: 150, h: 10});
+				platform.color("white");
 
 				var platform1 = Crafty.e("2D, DOM, Color, Platform");
-				platform1.attr({x: 300, y: 270, w: 150, h: 10});
-				platform1.color("green");
+				platform1.attr({x: 240, y: 200, w: 110, h: 10});
+				platform1.color("#FF1919");
 
 
 				var platform2 = Crafty.e("2D, DOM, Color, Platform");
-				platform2.attr({x: 550, y: 310, w: 100, h: 10});
-				platform2.color("green");
+				platform2.attr({x: 390, y: 390, w: 110, h: 10});
+				platform2.color("#feff70");
 
 				var platform3 = Crafty.e("2D, DOM, Color, Platform");
-				platform3.attr({x: 650, y: 380, w: 90, h: 10});
-				platform3.color("green");
+				platform3.attr({x: 540, y: 600, w: 110, h: 10});
+				platform3.color("#7dff18");
 
 				var platform4 = Crafty.e("2D, DOM, Color, Platform");
-				platform4.attr({x: 1000, y: 400, w: 60, h: 10});
-				platform4.color("green");
+				platform4.attr({x: 770, y: 400, w: 110, h: 10});
+				platform4.color("#8bddfd");
+
+				var platform5 = Crafty.e("2D, DOM, Color, Platform");
+				platform5.attr({x: 910, y: 180, w: 110, h: 10});
+				platform5.color("#3489ff");
+
+				var platform6 = Crafty.e("2D, DOM, Color, Platform");
+				platform6.attr({x: 1100, y: 330, w: 110, h: 10});
+				platform6.color("#814092");
 
 				var goal = Crafty.e("2D, DOM, Color, Twoway, Gravity, Collision");
-				goal.attr({x: 1310, y: 200, w: 200, h: 10});
-				goal.color("green");
+				goal.attr({x: 1310, y: 700, w: 130, h: 10});
+				goal.color("#473f49");
 
 				player.x = 10;
 				player.y = 100;
@@ -57,13 +65,16 @@
 
 				goal.onHit("Player", hit);
 
-				function hit(audio()){
+				function hit(){
 					alert("You win!");
+
+					var audio = new
+					Audio('beep5.mp3');
+					audio.play();
+					restart();
 				}
 
-				var audio = new
-				Audio('beep5.mp3');
-				
+
 			}
 
 			window.onload = start;
