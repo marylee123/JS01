@@ -1,0 +1,63 @@
+<html>
+  <head>
+    <title>Roguelike</title>
+    <script src="https://rawgithub.com/craftyjs/Crafty/release/dist/crafty-min.js"></script>
+  </head>
+  <body>
+    <script>
+      function start() {
+        Crafty.init()
+        Crafty.init(600, 400);
+        Crafty.background("#f00");
+        Crafty.background("tan");
+        var columns = 60;
+        var rows = 40;
+        var column;
+        var row;
+        for (column = 0; column < columns; column++) {
+          for (row = 0; row < rows; row++) {
+            console.log(column + ", " + row);
+          }
+        }
+        var tileWidth = 10;
+        var tileHeight = 10;
+        var columns = 60;
+        var rows = 40;
+        var column;
+        var row;
+        for (column = 0; column < columns; column++) {
+          for (row = 0; row < rows; row++) {
+          var tileX = column * tileHeight;
+          var tileY = row * tileWidth
+            console.log(tileX + ", " + tileY);
+          }
+        }
+        var time = 0;
+        while(time < 11){
+          treeColumn = Math.floor(Math.random() * (601));
+          treeRow = Math.floor(Math.random() * (401));
+          var tree = Crafty.e("2D, DOM, Color, Solid");
+          tree.attr({x: treeColumn, y: treeRow, w: tileWidth, h: tileHeight});
+          tree.color("black");
+
+          time = time + 1;
+        }
+
+        player = Crafty.e("2D, DOM, Color, Fourway, Collision");
+        player.attr({x: 0, y: 0, w: 10, h: 10});
+        player.color("blue");
+        player.fourway();
+        player.onHit("Solid", handleCollision)
+      }
+      function destroyPlayer() {
+        player.destroy();
+      }
+      function handleCollision(collision) {
+        var other = collision[0].obj;
+        other.destroy();
+      }
+      window.onload = start;
+    </script>
+    <button onclick="destroyPlayer();">Eject!</button>
+  </body>
+</html>
